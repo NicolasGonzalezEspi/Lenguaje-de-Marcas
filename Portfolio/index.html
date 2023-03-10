@@ -16,10 +16,10 @@
     <link type="image/x-icon" rel="icon">
 
     <title>Nicolas'Portfolio</title>
-
+    <script src="main.js"></script>
 </head>
 
-<body>
+<body id="body">
 
     <nav>
         <ul>
@@ -30,9 +30,9 @@
             <li></li>
             <li><a href="#">Inicio</a></li>
             <li> <a href="#sobremi">Sobre mí</a></li>
-            <li><a href="#sobremi">Portfolihorario</a></li> 
-            <li><a href="#sobremi">Servicios</a></li>
-            <li><a href="#sobremi">Contacto</a></li>
+            <li><a href="#" id="color-rojo">Rojo</a></li>
+            <li><a href="#" id="color-azul">Azul</a></li>
+            <li><a href="#" id="color-original">Original</a></li>
         </ul>
     </nav>
 
@@ -40,6 +40,7 @@
     <p>§</p>
     <p>§</p>
     <p>§</p>
+
     
     <div id="sobremi">
         <p></p>
@@ -74,62 +75,88 @@
         </div>
        
       </div>
-      <section id="portfolio">
-        <h2>Portfolio</h2>
-        <form>
-          <label for="filter">Filtrar por:</label>
-          <select id="filter">
-            <option value="todos">Todos</option>
-            <option value="java">Java</option>
-            <option value="html">HTML</option>
-            <option value="css">CSS</option>
-          </select>
-        </form>
-        <div class="cards-container">
-          <div class="card">
-            <div class="card-header">
-              <h3>Proyecto Java</h3>
-              <span class="java">Java</span>
+        <section id="portfolio">
+          <h2>Portfolio</h2>
+          <form>
+            <label for="filter-select">Filtrar por:</label>
+            <select id="filter-select">
+              <option value="all">Todos</option>
+              <option value="java">Java</option>
+              <option value="html">HTML</option>
+              <option value="css">CSS</option>
+            </select>
+          </form>
+          <div class="cards-container">
+            <div class="card">
+              <div class="card-header">
+                <h3>Proyecto Java</h3>
+                <span class="java">Java</span>
+              </div>
+              <div class="card-body">
+                <p>Tecnologías utilizadas:</p>
+                <ul>
+                  <li><span class="java">Java</span></li>
+                  <li><span class="html">HTML</span></li>
+                  <li><span class="css">CSS</span></li>
+                </ul>
+              </div>
             </div>
-            <div class="card-body">
-              <p>Tecnologías utilizadas:</p>
-              <ul>
-                <li><span class="java">Java</span></li>
-                <li><span class="html">HTML</span></li>
-                <li><span class="css">CSS</span></li>
-              </ul>
+            <div class="card">
+              <div class="card-header">
+                <h3>Proyecto HTML</h3>
+                <span class="html">HTML</span>
+              </div>
+              <div class="card-body">
+                <p>Tecnologías utilizadas:</p>
+                <ul>
+                  <li><span class="html">HTML</span></li>
+                  <li><span class="java">Java</span></li>
+                  <li><span class="css">CSS</span></li>
+                </ul>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header">
+                <h3>Proyecto CSS</h3>
+                <span class="css">CSS</span>
+              </div>
+              <div class="card-body">
+                <p>Tecnologías utilizadas:</p>
+                <ul>
+                  <li><span class="java">Java</span></li>
+                  <li><span class="html">HTML</span></li>
+                  <li><span class="css">CSS</span></li>
+                </ul>
+              </div>
             </div>
           </div>
-          <div class="card">
-            <div class="card-header">
-              <h3>Proyecto HTML</h3>
-              <span class="html">HTML</span>
+        </section>
+        <section id="cards">
+          <h2>Cards</h2>
+          <form>
+            <label for="filter-select">Filtrar por:</label>
+            <select id="filter-select">
+              <option value="all">Todas</option>
+              <option value="1">Contiene 1</option>
+              <option value="2">Contiene 2</option>
+            </select>
+          </form>
+          <div class="cards-container">
+            <div class="card" data-filter="1">
+              <h3>Card con el número 1</h3>
+              <p>Esta card contiene el número 1.</p>
             </div>
-            <div class="card-body">
-              <p>Tecnologías utilizadas:</p>
-              <ul>
-                <li><span class="html">HTML</span></li>
-                <li><span class="java">Java</span></li>
-                <li><span class="css">CSS</span></li>
-              </ul>
+            <div class="card" data-filter="2">
+              <h3>Card con el número 2</h3>
+              <p>Esta card contiene el número 2.</p>
             </div>
-          </div>
-          <div class="card">
-            <div class="card-header">
-              <h3>Proyecto CSS</h3>
-              <span class="css">CSS</span>
-            </div>
-            <div class="card-body">
-              <p>Tecnologías utilizadas:</p>
-              <ul>
-                <li><span class="java">Java</span></li>
-                <li><span class="html">HTML</span></li>
-                <li><span class="css">CSS</span></li>
-              </ul>
+            <div class="card" data-filter="all">
+              <h3>Card con todos los números</h3>
+              <p>Esta card contiene tanto el número 1 como el número 2.</p>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+        
       
 </div>
 
@@ -204,53 +231,88 @@
             </tr>
         </table>
     </div>
-    
     <div class="formulario">
-        <form method="get" action="mailto:nicolas.gonzalezespinosa@a.vedrunasevillasj.es" autocomplete="on">
-            <fieldset>
-                <legend class="legend">Datos de cliente</legend>
-                <label for="fname">Nombre:</label>
-                <input type="text" id="fname" placeholder="Nombre"><br /><br />
-                <label for="email">Correo electrónico:</label>
-                <input type="email" id="email" placeholder="example@example.com"><br /><br />
-                <label for="time">Selecciona Asunto</label>
-                <div class="select">
-                    <select id="time" name="time">
-                        <option value="Entrevista">Solicitar entrevista</option>
-                        <option value="Oferta">Oferta laboral</option>
-                        <option value="Desarrollo">Desarrollo de una página web</option>
-                        <option value="Servidor">Desarrollo de la capa servidor</option>
-                    </select>
-                </div>
-                <br>
-                <legend>Cómo me ha conocido</legend>
-                <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
-                <label for="redesociales"> Redes sociales</label><br>
-                <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
-                <label for="anuncios"> Anuncios</label><br><br>
-                <legend>Qué le ha parecido mi Web</legend>
-                <input type="radio" id="html" name="fav_language" value="HTML">
-                <label for="Pobre">Pobre</label><br>
-                <input type="radio" id="css" name="fav_language" value="CSS">
-                <label for="Normal">Normal</label><br>
-                <input type="radio" id="javascript" name="fav_language" value="JavaScript">
-                <label for="Excelente">Excelente</label><br>
-                <br><label for="demandas">Cuerpo del mensaje</label><br>
-                <textarea name="body" id="demandas" placeholder="A ver si le puedes dar a Enviar"></textarea><br /><br />
-                <label for="cc">CC:</label>
-                <input type="text" id="cc" name="cc"><br /><br />
-                <label for="subject">Asunto:</label>
-                <input type="text" id="subject" name="subject"><br /><br />
-                    <div class="botones">
-                        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
-                        <input type="reset" value="Reset" class="boton">
-                       <input type="submit" value="Enviar" class="boton">
-                      </div>
-                      </a>
-                  </div>                  
-            </fieldset>
-        </form>
-
+      <form method="get" action="mailto:nicolas.gonzalezespinosa@a.vedrunasevillasj.es" autocomplete="on">
+          <fieldset>
+              <legend class="legend">Datos de cliente</legend>
+              <label for="fname">Nombre:</label>
+              <input type="text" id="fname" placeholder="Nombre"><br /><br />
+              <style>
+                #email-input {
+                  border: 3px solid black;
+                }
+                
+                .error {
+                  border: 2px solid red;
+                }
+                
+                .correcto {
+                  border: 2px solid green;
+                }
+              </style>
+                  <label for="email-input">Correo electrónico:</label>
+              <input type="email" id="email-input" placeholder="Introduzca su correo electrónico" />
+              
+              <div id="email-validation-msg"></div>
+              
+              
+              
+              <script>
+                const emailInput = document.getElementById("email-input");
+                const emailValidationMsg = document.getElementById("email-validation-msg");
+              
+                emailInput.addEventListener("blur", () => {
+                  const emailValue = emailInput.value.trim();
+                  const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+              
+                  if (!regex.test(emailValue)) {
+                    emailInput.classList.add("error");
+                    emailInput.classList.remove("correcto");
+                    emailValidationMsg.innerText = "Por favor, introduzca una dirección de correo electrónico válida.";
+                  } else {
+                    emailInput.classList.add("correcto");
+                    emailInput.classList.remove("error");
+                    emailValidationMsg.innerText = "";
+                  }
+                });
+              </script>
+              <label for="time">Selecciona Asunto</label>
+              <div class="select">
+                  <select id="time" name="time">
+                      <option value="Entrevista">Solicitar entrevista</option>
+                      <option value="Oferta">Oferta laboral</option>
+                      <option value="Desarrollo">Desarrollo de una página web</option>
+                      <option value="Servidor">Desarrollo de la capa servidor</option>
+                  </select>
+              </div>
+              <br>
+              <legend>Cómo me ha conocido</legend>
+              <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+              <label for="redesociales"> Redes sociales</label><br>
+              <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+              <label for="anuncios"> Anuncios</label><br><br>
+              <legend>Qué le ha parecido mi Web</legend>
+              <input type="radio" id="html" name="fav_language" value="HTML">
+              <label for="Pobre">Pobre</label><br>
+              <input type="radio" id="css" name="fav_language" value="CSS">
+              <label for="Normal">Normal</label><br>
+              <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+              <label for="Excelente">Excelente</label><br>
+              <br><label for="demandas">Cuerpo del mensaje</label><br>
+              <textarea name="body" id="demandas" placeholder="A ver si le puedes dar a Enviar"></textarea><br /><br />
+              <label for="cc">CC:</label>
+              <input type="text" id="cc" name="cc"><br /><br />
+              <label for="subject">Asunto:</label>
+              <input type="text" id="subject" name="subject"><br /><br />
+                  <div class="botones">
+                      <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+                      <input type="reset" value="Reset" class="boton">
+                     <input type="submit" value="Enviar" class="boton">
+                    </div>
+                    </a>
+                </div>                  
+          </fieldset>
+      </form>
 
     <footer>
         <p class="animated-text">§</p>
