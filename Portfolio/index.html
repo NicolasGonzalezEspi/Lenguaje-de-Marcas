@@ -74,63 +74,88 @@
         </div>
        
       </div>
-      <section id="portfolio">
-        <h2>Portfolio</h2>
-        <form>
-          <label for="filter-select">Filtrar por:</label>
-          <select id="filter-select">
-            <option value="all">Todos</option>
-            <option value="java">Java</option>
-            <option value="html">HTML</option>
-            <option value="css">CSS</option>
-          </select>
-        </form>
-        <div class="cards-container">
-          <div class="card">
-            <div class="card-header">
-              <h3>Proyecto Java</h3>
-              <span class="java">Java</span>
+        <section id="portfolio">
+          <h2>Portfolio</h2>
+          <form>
+            <label for="filter-select">Filtrar por:</label>
+            <select id="filter-select">
+              <option value="all">Todos</option>
+              <option value="java">Java</option>
+              <option value="html">HTML</option>
+              <option value="css">CSS</option>
+            </select>
+          </form>
+          <div class="cards-container">
+            <div class="card">
+              <div class="card-header">
+                <h3>Proyecto Java</h3>
+                <span class="java">Java</span>
+              </div>
+              <div class="card-body">
+                <p>Tecnologías utilizadas:</p>
+                <ul>
+                  <li><span class="java">Java</span></li>
+                  <li><span class="html">HTML</span></li>
+                  <li><span class="css">CSS</span></li>
+                </ul>
+              </div>
             </div>
-            <div class="card-body">
-              <p>Tecnologías utilizadas:</p>
-              <ul>
-                <li><span class="java">Java</span></li>
-                <li><span class="html">HTML</span></li>
-                <li><span class="css">CSS</span></li>
-              </ul>
+            <div class="card">
+              <div class="card-header">
+                <h3>Proyecto HTML</h3>
+                <span class="html">HTML</span>
+              </div>
+              <div class="card-body">
+                <p>Tecnologías utilizadas:</p>
+                <ul>
+                  <li><span class="html">HTML</span></li>
+                  <li><span class="java">Java</span></li>
+                  <li><span class="css">CSS</span></li>
+                </ul>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header">
+                <h3>Proyecto CSS</h3>
+                <span class="css">CSS</span>
+              </div>
+              <div class="card-body">
+                <p>Tecnologías utilizadas:</p>
+                <ul>
+                  <li><span class="java">Java</span></li>
+                  <li><span class="html">HTML</span></li>
+                  <li><span class="css">CSS</span></li>
+                </ul>
+              </div>
             </div>
           </div>
-          <div class="card">
-            <div class="card-header">
-              <h3>Proyecto HTML</h3>
-              <span class="html">HTML</span>
+        </section>
+        <section id="cards">
+          <h2>Cards</h2>
+          <form>
+            <label for="filter-select">Filtrar por:</label>
+            <select id="filter-select">
+              <option value="all">Todas</option>
+              <option value="1">Contiene 1</option>
+              <option value="2">Contiene 2</option>
+            </select>
+          </form>
+          <div class="cards-container">
+            <div class="card" data-filter="1">
+              <h3>Card con el número 1</h3>
+              <p>Esta card contiene el número 1.</p>
             </div>
-            <div class="card-body">
-              <p>Tecnologías utilizadas:</p>
-              <ul>
-                <li><span class="html">HTML</span></li>
-                <li><span class="java">Java</span></li>
-                <li><span class="css">CSS</span></li>
-              </ul>
+            <div class="card" data-filter="2">
+              <h3>Card con el número 2</h3>
+              <p>Esta card contiene el número 2.</p>
             </div>
-          </div>
-          <div class="card">
-            <div class="card-header">
-              <h3>Proyecto CSS</h3>
-              <span class="css">CSS</span>
-            </div>
-            <div class="card-body">
-              <p>Tecnologías utilizadas:</p>
-              <ul>
-                <li><span class="java">Java</span></li>
-                <li><span class="html">HTML</span></li>
-                <li><span class="css">CSS</span></li>
-              </ul>
+            <div class="card" data-filter="all">
+              <h3>Card con todos los números</h3>
+              <p>Esta card contiene tanto el número 1 como el número 2.</p>
             </div>
           </div>
-        </div>
-      </section>
-      
+        </section>
+        
       
 </div>
 

@@ -23,18 +23,20 @@ document.addEventListener("DOMContentLoaded", function() {
       cuerpoPagina.style.backgroundColor = fondoOriginal;
     });
   });
-  const filterSelect = document.querySelector('#filter-select');
-  const cardsContainer = document.querySelector('.cards-container');
+
+  function filtrarCards() {
+    const filtro = document.getElementById("filter-select").value;
+    const cards = document.querySelectorAll(".card");
   
-  filterSelect.addEventListener('change', (event) => {
-    const selectedValue = event.target.value;
-    
-    for (let card of cardsContainer.children) {
-      if (selectedValue === 'all' || card.querySelector(`.${selectedValue}`)) {
-        card.style.display = 'block';
+    cards.forEach(card => {
+      if (filtro === "all" || card.getAttribute("data-filter") === filtro) {
+        card.style.display = "block";
       } else {
-        card.style.display = 'none';
+        card.style.display = "none";
       }
-    }
-  });
+    });
+  }
+  
+  document.getElementById("filter-select").addEventListener("change", filtrarCards);
+  
   
