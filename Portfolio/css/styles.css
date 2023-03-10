@@ -1,0 +1,321 @@
+*{
+    font-family: Roboto;
+}
+
+body{
+    background-color: #DEFDF8;
+    margin:0;
+    padding: 0;
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+.contenedor-index {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+#mi-div {
+    scroll-padding-top: 60px;
+  }
+  @keyframes mover-boton {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-200px); }
+}
+.animated-text {
+    animation: move-down 0.5s ease-in-out infinite alternate;
+  }
+  
+  @keyframes move-down {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(10px);
+    }
+  }
+  
+
+.boton {
+    background-color: #4CAF50; /* color de fondo */
+    color: white; /* color de texto */
+    padding: 10px 15px; /* tamaño del botón */
+    border: none; /* sin borde */
+    border-radius: 5px; /* borde redondeado */
+    margin-right: 10px; /* separación entre botones */
+    animation: mover-boton 4s linear infinite; /* animación */
+    z-index: 0;
+
+  }
+  
+  @keyframes mover-boton {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(300px); }
+    100% { transform: translateX(0); }
+  }
+  
+
+    
+  
+
+.containerr {
+    display: flex;
+    align-items: center;
+    max-width: 600px; /* Ancho máximo del contenedor */
+    margin: 0 auto; /* Margen automático en ambos lados */
+    margin-bottom: 30px;
+    background-color: white; /* Color de fondo inicial */
+
+  }
+  .containerr:active {
+    background-color: yellow; /* Color de fondo al ser presionado */
+  }
+  
+  .containerr img {
+    margin-right: 30px; /* Ajusta el espacio entre la imagen y el texto */
+    max-width: 50%; /* Establece el ancho máximo de la imagen */
+  }
+  
+  .containerr p {
+    margin: 0; /* Elimina el margen del párrafo */
+    flex: 1; /* Permite que el texto ocupe todo el espacio restante */
+  }
+
+
+  
+
+ul {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 20px;
+}
+
+table {
+  display: inline-block;
+  vertical-align: top;
+  width: 50%;
+}
+
+/* Estilo para <header>*/
+
+header h1, header h2{
+    background-color: #000144;
+    margin: 0;
+    font-size: 30px;
+    padding: 0.3rem;
+    color: white;
+    text-align: center;
+}
+
+header h2 {
+    font-size: 30px;
+}
+nav {
+    overflow: hidden;
+    position: fixed; 
+    width: 100%;
+        top: 0px;
+        z-index: 1;
+
+}
+
+nav ul{
+    background-color: rgb(255, 255, 255);
+    margin:0;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    color:rgb(0, 0, 73)
+}
+
+nav a{
+    color: rgb(0, 110, 255);
+    font-weight: bold;
+    font-size: 17px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: yellow;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+/* Estilo para index.html*/
+
+.contenedorr{
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+.contenedorr {
+    margin-top: calc(100vh - nav.offsetHeight);
+}
+
+.formulario{
+    text-align: center;
+}
+
+
+.centrado{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 60px;
+    color: white;
+
+}
+#portfolio {
+  background-color: #f5f5f5;
+  padding: 50px;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+form {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+label {
+  font-weight: bold;
+}
+
+select {
+  margin-left: 10px;
+}
+
+.cards-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: calc(33.33% - 10px);
+  margin-bottom: 20px;
+}
+
+.card-header {
+  background-color: #f5f5f5;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.card-header h3 {
+  margin: 0;
+  font-size: 1.2em;
+}
+
+.card-header span {
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+  font-size:0.9em;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 5px;
+  }
+  
+  .card-body {
+  padding: 10px;
+  }
+  
+  .card-body ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  }
+  
+  .card-body ul li {
+  margin-bottom: 5px;
+  }
+  
+  .card-body ul li span {
+  padding: 2px 5px;
+  border-radius: 5px;
+  }
+  
+  .java {
+  background-color: #ffcc00;
+  color: white;
+  }
+  
+  .html {
+  background-color: #f06529;
+  color: white;
+  }
+  
+  .css {
+  background-color: #264de4;
+  color: white;
+  }
+
+
+.portada {
+    height: 75vh;
+    width: 100vw;
+    object-fit: cover;
+}
+.contenedor-index {
+    display: grid;
+    grid-template-columns:1fr;
+}
+
+.contenedor-elipses {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-content: space-around;
+    gap:20px;
+}
+
+.contenedor-index div {
+	background-color: #A7B5EA;
+    display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+    align-items: center;
+    border-radius: 50%;
+    height: 220px;
+    width: 400px;
+    border: 5px solid black;
+    font-size: 20px;
+    font-variant: small-caps;
+    font-weight: bolder;
+}
+
+
+
+/* Estilo para <Footer>*/
+
+footer{
+    background-color: rgb(0, 0, 73);
+    color: white;
+    margin: 0;
+    padding: 1rem;
+    bottom: 2%;
+    text-align: center;
+}
+
+footer a{
+    color: white;
+}
+
+footer a:hover{
+    color: yellow;
+    cursor: pointer;
+}
+
+
